@@ -1,0 +1,14 @@
+{
+	"EC2": "http://ec2.localhost.localstack.cloud:4566",
+	"S3": "http://s3.localhost.localstack.cloud:4566",
+	"CloudFormation": "http://cloudformation.localhost.localstack.cloud:4566",
+	"Lambda": "http://lambda.localhost.localstack.cloud:4566",
+	"STS": "http://sts.localhost.localstack.cloud:4566",
+	"SQS": "http://sqs.localhost.localstack.cloud:4566",
+	"SNS": "http://sns.localhost.localstack.cloud:4566",
+	"Route53": "http://route53.localhost.localstack.cloud:4566",
+	"CloudWatch": "http://cloudwatch.localhost.localstack.cloud:4566",
+	"CloudWatchLogs": "http://cloudwatchlogs.localhost.localstack.cloud:4566",
+	"Kinesis": "http://kinesis.localhost.localstack.cloud:4566",
+	"DynamoDB": "http://dynamodb.localhost.localstack.cloud:4566"
+}

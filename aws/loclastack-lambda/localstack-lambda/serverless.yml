@@ -1,0 +1,21 @@
+service: localstack-lambda
+plugins:
+  - serverless-localstack
+
+custom:
+  localstack:
+    debug: true
+    stages:
+      - dev
+      - local
+    endpointFile: localstack-endpoints.json
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  hello:
+    handler: handler.hello
