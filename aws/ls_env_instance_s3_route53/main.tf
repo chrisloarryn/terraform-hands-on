@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "bucket" {
 resource "aws_instance" "web" {
   count         = 2
   ami           = "ami-005e54dee72cc1d00"
-  instance_type = "t2.micro"
+  instance_type = "t4g.nano"
 
   tags = {
     Name        = "webserver-${count.index}"
