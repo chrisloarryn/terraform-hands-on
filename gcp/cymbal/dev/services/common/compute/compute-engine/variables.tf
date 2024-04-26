@@ -20,3 +20,9 @@ variable "path_to_credentials" {
   description = "The path to the service account key"
   type        = string
 }
+
+# variable "compute_engine" {
+#   description = "The compute engine configuration"
+
+
+# }
