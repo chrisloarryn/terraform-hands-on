@@ -19,7 +19,6 @@ resource "google_cloud_scheduler_job" "job_morning" {
     # Configuración OIDC
     oidc_token {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
-      audience              = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app"
     }
   }
 }
@@ -45,7 +44,6 @@ resource "google_cloud_scheduler_job" "job_afternoon_mon_thu" {
     # Configuración OIDC
     oidc_token {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
-      audience              = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app"
     }
   }
 }
@@ -73,7 +71,6 @@ resource "google_cloud_scheduler_job" "job_friday" {
     # Configuración OIDC
     oidc_token {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
-      audience              = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app"
     }
   }
 }
@@ -102,7 +99,6 @@ resource "google_cloud_scheduler_job" "marker_variation" {
     # Configuración OIDC
     oidc_token {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
-      audience              = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app"
     }
   }
 }
@@ -132,7 +128,6 @@ resource "google_cloud_scheduler_job" "job_morning_api" {
     # Configuración OIDC
     oidc_token {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
-      audience              = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app"
     }
   }
 }
@@ -158,7 +153,6 @@ resource "google_cloud_scheduler_job" "job_afternoon_mon_thu_api" {
     # Configuración OIDC
     oidc_token {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
-      audience              = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app"
     }
   }
 }
@@ -186,7 +180,6 @@ resource "google_cloud_scheduler_job" "job_friday_api" {
     # Configuración OIDC
     oidc_token {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
-      audience              = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app"
     }
   }
 }
