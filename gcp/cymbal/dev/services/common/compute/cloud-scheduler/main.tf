@@ -5,16 +5,6 @@ resource "google_cloud_scheduler_job" "job_morning" {
   schedule  = "55 8 * * 1-5"
   time_zone = "America/Santiago" # Ajusta según tu zona horaria
 
-  retry_config {
-    retry_count          = 1
-    min_backoff_duration = "5s"
-    max_backoff_duration = "3600s"
-    max_doublings        = 5
-    max_retry_duration   = "0s"
-  }
-
-  attempt_deadline = "180s"
-
   http_target {
     uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/execute"
     http_method = "POST"
@@ -34,16 +24,6 @@ resource "google_cloud_scheduler_job" "job_afternoon_mon_thu" {
 
   schedule  = "4 19 * * 1-4"
   time_zone = "America/Santiago" # Ajusta según tu zona horaria
-
-  retry_config {
-    retry_count          = 1
-    min_backoff_duration = "5s"
-    max_backoff_duration = "3600s"
-    max_doublings        = 5
-    max_retry_duration   = "0s"
-  }
-
-  attempt_deadline = "180s"
 
   http_target {
     uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/execute"
@@ -65,16 +45,7 @@ resource "google_cloud_scheduler_job" "job_friday" {
   schedule  = "47 16 * * 5"
   time_zone = "America/Santiago" # Ajusta según tu zona horaria
 
-  # max retry attempts
-  retry_config {
-    retry_count          = 1
-    min_backoff_duration = "5s"
-    max_backoff_duration = "3600s"
-    max_doublings        = 5
-    max_retry_duration   = "0s"
-  }
-
-  attempt_deadline = "180s"
+  # max retry attempt
 
   http_target {
     uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/execute"
