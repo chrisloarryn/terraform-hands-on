@@ -122,7 +122,7 @@ resource "google_cloud_scheduler_job" "job_14_15" {
     }
 
     # Configuración OIDC
-     oidc_token {
+    oidc_token {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
     }
   }
@@ -133,9 +133,9 @@ resource "google_cloud_scheduler_job" "job_14_15" {
 # needs to be executed every at 8:25 AM from Monday to Friday and at 16:25 PM from Monday to Friday
 resource "google_cloud_scheduler_job" "marker_variation" {
   name        = "marker-variation"
-  description = "Tarea diaria para 8:25 AM y 16:25 PM de lunes a viernes"
+  description = "Tarea diaria para 8:25 AM y 13:25 PM de lunes a viernes"
 
-  schedule  = "25 8,16 * * 1-5"
+  schedule  = "25 8,13 * * 1-5"
   time_zone = "America/Santiago" # Ajusta según tu zona horaria
 
   http_target {
