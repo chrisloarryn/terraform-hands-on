@@ -6,7 +6,7 @@ resource "google_cloud_scheduler_job" "job_morning" {
   time_zone = "America/Santiago" # Ajusta según tu zona horaria
 
   http_target {
-    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/execute"
+    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/v2/execute"
     http_method = "POST"
     body = base64encode(jsonencode({
       rut      = "189795696"
@@ -31,7 +31,7 @@ resource "google_cloud_scheduler_job" "job_afternoon_mon_thu" {
   time_zone = "America/Santiago" # Ajusta según tu zona horaria
 
   http_target {
-    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/execute"
+    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/v2/execute"
     http_method = "POST"
     body = base64encode(jsonencode({
       rut      = "189795696"
@@ -58,7 +58,7 @@ resource "google_cloud_scheduler_job" "job_friday" {
   # max retry attempt
 
   http_target {
-    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/execute"
+    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/v2/execute"
     http_method = "POST"
     body = base64encode(jsonencode({
       rut      = "189795696"
@@ -115,7 +115,7 @@ resource "google_cloud_scheduler_job" "job_morning_api" {
   time_zone = "America/Santiago" # Ajusta según tu zona horaria
 
   http_target {
-    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/execute"
+    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/v2/execute"
     http_method = "POST"
     body = base64encode(jsonencode({
       rut      = "192935423"
@@ -140,7 +140,7 @@ resource "google_cloud_scheduler_job" "job_afternoon_mon_thu_api" {
   time_zone = "America/Santiago" # Ajusta según tu zona horaria
 
   http_target {
-    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/execute"
+    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/v2/execute"
     http_method = "POST"
     body = base64encode(jsonencode({
       rut      = "192935423"
@@ -167,7 +167,7 @@ resource "google_cloud_scheduler_job" "job_friday_api" {
   # max retry attempt
 
   http_target {
-    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/execute"
+    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/v2/execute"
     http_method = "POST"
     body = base64encode(jsonencode({
       rut      = "192935423"
