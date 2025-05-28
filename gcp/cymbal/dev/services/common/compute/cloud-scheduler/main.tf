@@ -23,11 +23,11 @@ resource "google_cloud_scheduler_job" "job_morning" {
   }
 
   retry_config {
-    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
-    max_retry_duration   = "300s"   # 5 minutos
-    min_backoff_duration = "10s"    # primer reintento rápido
-    max_backoff_duration = "40s"    # tope de espera
-    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
   }
 }
 
@@ -56,11 +56,11 @@ resource "google_cloud_scheduler_job" "job_afternoon_mon_thu" {
   }
 
   retry_config {
-    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
-    max_retry_duration   = "300s"   # 5 minutos
-    min_backoff_duration = "10s"    # primer reintento rápido
-    max_backoff_duration = "40s"    # tope de espera
-    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
   }
 }
 
@@ -91,11 +91,11 @@ resource "google_cloud_scheduler_job" "job_friday" {
   }
 
   retry_config {
-    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
-    max_retry_duration   = "300s"   # 5 minutos
-    min_backoff_duration = "10s"    # primer reintento rápido
-    max_backoff_duration = "40s"    # tope de espera
-    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
   }
 }
 
@@ -126,11 +126,11 @@ resource "google_cloud_scheduler_job" "job_13_30" {
   }
 
   retry_config {
-    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
-    max_retry_duration   = "300s"   # 5 minutos
-    min_backoff_duration = "10s"    # primer reintento rápido
-    max_backoff_duration = "40s"    # tope de espera
-    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
   }
 }
 
@@ -160,11 +160,11 @@ resource "google_cloud_scheduler_job" "job_14_15" {
   }
 
   retry_config {
-    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
-    max_retry_duration   = "300s"   # 5 minutos
-    min_backoff_duration = "10s"    # primer reintento rápido
-    max_backoff_duration = "40s"    # tope de espera
-    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
   }
 }
 
@@ -196,11 +196,11 @@ resource "google_cloud_scheduler_job" "job_morning_jomo" {
   }
 
   retry_config {
-    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
-    max_retry_duration   = "300s"   # 5 minutos
-    min_backoff_duration = "10s"    # primer reintento rápido
-    max_backoff_duration = "40s"    # tope de espera
-    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
   }
 }
 
@@ -229,11 +229,11 @@ resource "google_cloud_scheduler_job" "job_afternoon_mon_thu_jomo" {
   }
 
   retry_config {
-    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
-    max_retry_duration   = "300s"   # 5 minutos
-    min_backoff_duration = "10s"    # primer reintento rápido
-    max_backoff_duration = "40s"    # tope de espera
-    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
   }
 }
 
@@ -264,11 +264,11 @@ resource "google_cloud_scheduler_job" "job_friday_jomo" {
   }
 
   retry_config {
-    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
-    max_retry_duration   = "300s"   # 5 minutos
-    min_backoff_duration = "10s"    # primer reintento rápido
-    max_backoff_duration = "40s"    # tope de espera
-    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
   }
 }
 
@@ -299,11 +299,11 @@ resource "google_cloud_scheduler_job" "job_13_30_jomo" {
   }
 
   retry_config {
-    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
-    max_retry_duration   = "300s"   # 5 minutos
-    min_backoff_duration = "10s"    # primer reintento rápido
-    max_backoff_duration = "40s"    # tope de espera
-    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
   }
 }
 
@@ -333,11 +333,183 @@ resource "google_cloud_scheduler_job" "job_14_15_jomo" {
   }
 
   retry_config {
-    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
-    max_retry_duration   = "300s"   # 5 minutos
-    min_backoff_duration = "10s"    # primer reintento rápido
-    max_backoff_duration = "40s"    # tope de espera
-    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
+  }
+}
+
+
+/// SCHEDULER JOBS *-frapac
+resource "google_cloud_scheduler_job" "job_morning_frapac" {
+  name        = "daily-task-morning-frapac"
+  description = "Tarea diaria para 8:55 AM de lunes a viernes API"
+
+  schedule  = "55 8 * * 1-5"
+  time_zone = "America/Santiago" # Ajusta según tu zona horaria
+
+  http_target {
+    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/v2/execute"
+    http_method = "POST"
+    body = base64encode(jsonencode({
+      rut      = "138406253"
+      password = "2435"
+    }))
+    headers = {
+      "Content-Type" = "application/json"
+    }
+
+    # Configuración OIDC
+    oidc_token {
+      service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
+    }
+  }
+
+  retry_config {
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
+  }
+}
+
+resource "google_cloud_scheduler_job" "job_afternoon_mon_thu_frapac" {
+  name        = "daily-task-afternoon-mon-thu-frapac"
+  description = "Tarea diaria para 19:04 de lunes a jueves API"
+
+  schedule  = "4 19 * * 1-4"
+  time_zone = "America/Santiago" # Ajusta según tu zona horaria
+
+  http_target {
+    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/v2/execute"
+    http_method = "POST"
+    body = base64encode(jsonencode({
+      rut      = "138406253"
+      password = "2435"
+    }))
+    headers = {
+      "Content-Type" = "application/json"
+    }
+
+    # Configuración OIDC
+    oidc_token {
+      service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
+    }
+  }
+
+  retry_config {
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
+  }
+}
+
+resource "google_cloud_scheduler_job" "job_friday_frapac" {
+  name        = "daily-task-friday-frapac"
+  description = "Tarea diaria para 16:47 el viernes API"
+
+  schedule  = "47 16 * * 5"
+  time_zone = "America/Santiago" # Ajusta según tu zona horaria
+
+  # max retry attempt
+
+  http_target {
+    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/v2/execute"
+    http_method = "POST"
+    body = base64encode(jsonencode({
+      rut      = "138406253"
+      password = "2435"
+    }))
+    headers = {
+      "Content-Type" = "application/json"
+    }
+
+    # Configuración OIDC
+    oidc_token {
+      service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
+    }
+  }
+
+  retry_config {
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
+  }
+}
+
+# other markers at: 13:30 and at 14:15
+# job at 13:30
+resource "google_cloud_scheduler_job" "job_13_30_frapac" {
+  name        = "daily-task-13-30-frapac"
+  description = "Tarea diaria para 13:30 API"
+
+  schedule  = "30 13 * * 1-5"
+  time_zone = "America/Santiago" # Ajusta según tu zona horaria
+
+  http_target {
+    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/v2/execute"
+    http_method = "POST"
+    body = base64encode(jsonencode({
+      rut      = "138406253"
+      password = "2435"
+    }))
+    headers = {
+      "Content-Type" = "application/json"
+    }
+
+    # Configuración OIDC
+    oidc_token {
+      service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
+    }
+  }
+
+  retry_config {
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
+  }
+}
+
+# job at 14:15
+resource "google_cloud_scheduler_job" "job_14_15_frapac" {
+  name        = "daily-task-14-15-frapac"
+  description = "Tarea diaria para 14:15 API"
+
+  schedule  = "15 14 * * 1-5"
+  time_zone = "America/Santiago" # Ajusta según tu zona horaria
+
+  http_target {
+    uri         = "https://movil-app-backendo-dev-ey2qb5zbbq-tl.a.run.app/v2/execute"
+    http_method = "POST"
+    body = base64encode(jsonencode({
+      rut      = "138406253"
+      password = "2435"
+    }))
+    headers = {
+      "Content-Type" = "application/json"
+    }
+
+    # Configuración OIDC
+    oidc_token {
+      service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
+    }
+  }
+
+  retry_config {
+    retry_count          = 4      # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "900s" # 15 minutos
+    min_backoff_duration = "60s"  # primer reintento al minuto
+    max_backoff_duration = "240s" # nunca esperará más de 4 min
+    max_doublings        = 2      # 60 s → 120 s → 240 s → 240 s
   }
 }
 
