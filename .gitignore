@@ -1,3 +1,4 @@
 
 .DS_Store
 /gcp/keys/*
+gcp/cymbal/dev/services/common/compute/cloud-scheduler/tfplan

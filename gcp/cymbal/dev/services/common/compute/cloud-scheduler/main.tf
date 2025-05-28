@@ -21,6 +21,14 @@ resource "google_cloud_scheduler_job" "job_morning" {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
     }
   }
+
+  retry_config {
+    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "300s"   # 5 minutos
+    min_backoff_duration = "10s"    # primer reintento rápido
+    max_backoff_duration = "40s"    # tope de espera
+    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+  }
 }
 
 resource "google_cloud_scheduler_job" "job_afternoon_mon_thu" {
@@ -45,6 +53,14 @@ resource "google_cloud_scheduler_job" "job_afternoon_mon_thu" {
     oidc_token {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
     }
+  }
+
+  retry_config {
+    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "300s"   # 5 minutos
+    min_backoff_duration = "10s"    # primer reintento rápido
+    max_backoff_duration = "40s"    # tope de espera
+    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
   }
 }
 
@@ -73,6 +89,14 @@ resource "google_cloud_scheduler_job" "job_friday" {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
     }
   }
+
+  retry_config {
+    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "300s"   # 5 minutos
+    min_backoff_duration = "10s"    # primer reintento rápido
+    max_backoff_duration = "40s"    # tope de espera
+    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+  }
 }
 
 # other markers at: 13:30 and at 14:15
@@ -100,6 +124,14 @@ resource "google_cloud_scheduler_job" "job_13_30" {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
     }
   }
+
+  retry_config {
+    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "300s"   # 5 minutos
+    min_backoff_duration = "10s"    # primer reintento rápido
+    max_backoff_duration = "40s"    # tope de espera
+    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+  }
 }
 
 # job at 14:15
@@ -125,6 +157,14 @@ resource "google_cloud_scheduler_job" "job_14_15" {
     oidc_token {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
     }
+  }
+
+  retry_config {
+    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "300s"   # 5 minutos
+    min_backoff_duration = "10s"    # primer reintento rápido
+    max_backoff_duration = "40s"    # tope de espera
+    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
   }
 }
 
@@ -154,6 +194,14 @@ resource "google_cloud_scheduler_job" "job_morning_jomo" {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
     }
   }
+
+  retry_config {
+    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "300s"   # 5 minutos
+    min_backoff_duration = "10s"    # primer reintento rápido
+    max_backoff_duration = "40s"    # tope de espera
+    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+  }
 }
 
 resource "google_cloud_scheduler_job" "job_afternoon_mon_thu_jomo" {
@@ -178,6 +226,14 @@ resource "google_cloud_scheduler_job" "job_afternoon_mon_thu_jomo" {
     oidc_token {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
     }
+  }
+
+  retry_config {
+    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "300s"   # 5 minutos
+    min_backoff_duration = "10s"    # primer reintento rápido
+    max_backoff_duration = "40s"    # tope de espera
+    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
   }
 }
 
@@ -206,6 +262,14 @@ resource "google_cloud_scheduler_job" "job_friday_jomo" {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
     }
   }
+
+  retry_config {
+    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "300s"   # 5 minutos
+    min_backoff_duration = "10s"    # primer reintento rápido
+    max_backoff_duration = "40s"    # tope de espera
+    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+  }
 }
 
 # other markers at: 13:30 and at 14:15
@@ -233,6 +297,14 @@ resource "google_cloud_scheduler_job" "job_13_30_jomo" {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
     }
   }
+
+  retry_config {
+    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "300s"   # 5 minutos
+    min_backoff_duration = "10s"    # primer reintento rápido
+    max_backoff_duration = "40s"    # tope de espera
+    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
+  }
 }
 
 # job at 14:15
@@ -258,6 +330,14 @@ resource "google_cloud_scheduler_job" "job_14_15_jomo" {
     oidc_token {
       service_account_email = "chrisloarryn@gcp-course-2024.iam.gserviceaccount.com"
     }
+  }
+
+  retry_config {
+    retry_count          = 4        # 5 intentos en total (1 inicial + 4 reintentos)
+    max_retry_duration   = "300s"   # 5 minutos
+    min_backoff_duration = "10s"    # primer reintento rápido
+    max_backoff_duration = "40s"    # tope de espera
+    max_doublings        = 3        # 10 s → 20 s → 40 s → 40 s
   }
 }
 
