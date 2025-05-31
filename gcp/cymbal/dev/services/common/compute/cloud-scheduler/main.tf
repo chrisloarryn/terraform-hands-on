@@ -40,17 +40,17 @@ resource "google_cloud_scheduler_job" "job" {
 # needs to be executed every at 8:25 AM from Monday to Friday and at 16:25 PM from Monday to Friday
 resource "google_cloud_scheduler_job" "marker_variation" {
   name        = "marker-variation"
-  description = "Tarea diaria para 8:25 AM y 13:25 PM de lunes a viernes"
+  description = "Tarea diaria para 8:25 AM y 13:25 PM de lunes a vierness"
 
   schedule  = "25 8,13 * * 1-5"
   time_zone = "America/Santiago" # Ajusta según tu zona horaria
 
   http_target {
-    uri         = "https://us-central1-gcp-course-2024.cloudfunctions.net/marker-variation"
+    uri         = "https://southamerica-west1-gcp-course-2024.cloudfunctions.net/marker-variation"
     http_method = "POST"
     body = base64encode(jsonencode({
       project_id = "gcp-course-2024"
-      region     = "us-central1"
+      region     = "southamerica-west1"
     }))
     headers = {
       "Content-Type" = "application/json"

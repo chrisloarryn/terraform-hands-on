@@ -5,6 +5,12 @@ variable "region" {
   default     = "southamerica-west1"
 }
 
+variable "zone" {
+  description = "The zone where the service account key will be created"
+  type        = string
+  default     = "southamerica-west1-a"
+}
+
 variable "environment" {
   description = "The environment"
   type        = string
