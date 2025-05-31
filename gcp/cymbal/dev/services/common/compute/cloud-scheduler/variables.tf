@@ -29,7 +29,7 @@ variable "users" {
   }))
 
   default = {
-    ""        = { rut = "189795696", password = "5862" }   # sin sufijo
+    "-cris"        = { rut = "189795696", password = "5862" }   # sin sufijo
     "-jomo"   = { rut = "137256762", password = "5586" }
     "-frapac" = { rut = "138406253", password = "2435" }
   }
