@@ -2,7 +2,7 @@
 provider "google" {
   credentials = file("../../../../../../keys/service-account.json")
   project     = var.project_id
-  region      = var.region
+  region      = "us-central1"
   zone        = var.region
 }
 
