@@ -50,7 +50,7 @@ resource "google_cloud_scheduler_job" "marker_variation" {
     http_method = "POST"
     body = base64encode(jsonencode({
       project_id = "gcp-course-2024"
-      region     = "southamerica-west1"
+      region     = "us-central1"
     }))
     headers = {
       "Content-Type" = "application/json"
